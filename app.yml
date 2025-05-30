@@ -1,0 +1,10 @@
+runtime: python39
+service: hsn-agent
+entrypoint: agent.agent.HSNAgent
+
+env_variables:
+  DATA_FILE_PATH: 'data/HSN_Master_Data.xlsx'
+
+handlers:
+- url: /.*
+  script: auto
